@@ -1,0 +1,16 @@
+fname = str("Имя:"+input('Введите Имя: ')+"; ")
+lname = str("Фамилия:"+input('Введите Фамилию: ')+"; ")
+year = str("Возраст:"+input('Введите возраст: ')+"; ")
+town = str('Город:'+input('Введите город: ')+"; ")
+strt = str("Улица:"+input('Введите улицу: ')+"; ")
+buil = str("Дом:"+input('Введите номер дома: ')+"; ")
+I = [fname, lname, year, town, strt, buil]
+f1 = open("Work.txt", "a")
+   # Программа делает строчку (\ха0)
+for item in I:
+    f1.write("%s\xa0" % item)
+f1.write('\n')
+f1.close()
+f1 = open("Work.txt")
+k = f1.read()
+print(k)
